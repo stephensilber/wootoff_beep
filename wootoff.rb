@@ -3,8 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 
 previous = ""
-timeout = ARGV[0]
-timeout = 5 if !timeout
+timeout = (ARGV[0]) ? ARGV[0] : 5
 
 while true do
   woot = Nokogiri::HTML(open('http://www.woot.com'))
