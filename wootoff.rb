@@ -11,7 +11,8 @@ while true do
         if previous != t.content
             previous = t.content
             puts t.content
-            `beep`
+	    cmd = "\"say #{t.content}\""
+            `"#{cmd}"`
         end
   end
   sleep timeout
